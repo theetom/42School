@@ -6,13 +6,13 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 16:08:57 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/08 16:10:12 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/04/10 15:53:46 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	unsigned long	i;
 
 	i = 0;
 	while (str[i] != '\0')

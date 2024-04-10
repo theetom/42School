@@ -1,45 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/09 13:08:24 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/10 16:03:06 by toferrei         ###   ########.fr       */
+/*   Created: 2024/04/10 13:53:07 by toferrei          #+#    #+#             */
+/*   Updated: 2024/04/10 16:01:51 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
-
-size_t	ft_strlen(char *str)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	n;
-
-	n = 0;
-	while (str[n] != '\0')
-	{
-		n++;
-	}
-	return (n);
-}
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
-{
-	unsigned int	i;
-	unsigned int	n;
-
-	n = ft_strlen(src);
+	unsigned long	i;
+	
+	int *temp[n];
 	i = 0;
-	if (size > 0)
+	while (((int *)src)[i] && i < n)
 	{
-		while (src[i] != '\0' && i < (size - 1))
-		{
-			dest[i] = src[i];
-			i++;
-		}
+		temp[i] = ((int *)src)[i];
+		((int *)dest)[i] = temp[i];
 	}
-	dest[i] = '\0';
-	return (n);
+	return (dest);
 }
