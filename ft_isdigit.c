@@ -6,16 +6,16 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:14:07 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/09 15:55:50 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/04/11 14:09:05 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_isdigit(int c)
 {
 	if ('0' <= c && c <= '9')
 		return (1);
 	else
-		{
-			return (0);
-		}
+		return (0);
 }

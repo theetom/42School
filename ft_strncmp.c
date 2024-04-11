@@ -1,33 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/04/10 13:53:07 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/11 13:54:24 by toferrei         ###   ########.fr       */
+/*   Created: 2024/04/11 12:38:35 by toferrei          #+#    #+#             */
+/*   Updated: 2024/04/11 14:14:57 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned long	i;
-	int				temp[n];
+	unsigned int	i;
 
 	i = 0;
-	while (((int *)src)[i] && i < n)
-	{
-		temp[i] = ((int *)src)[i];
+	if (n == 0)
+		return (i);
+	while (s1[i] == s2[i] && s1[i] && i < n - 1)
 		i++;
-	}
-	i = 0;
- 	while (((int *)src)[i] && i < n)
-	{
-		((int *)dest)[i] = temp[i];
-		i++;
-	}
-	return (dest);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }
+
+/* int	main()
+{
+	printf("%d", ft_strncmp("abcdf", "ac", 2));
+	return (0);
+} */

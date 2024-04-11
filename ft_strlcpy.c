@@ -6,26 +6,13 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:08:24 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/10 16:03:06 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/04/11 19:53:30 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
-
-size_t	ft_strlen(char *str)
-{
-	int	n;
-
-	n = 0;
-	while (str[n] != '\0')
-	{
-		n++;
-	}
-	return (n);
-}
-
-unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
+size_t	ft_strlcpy(char *dest, char *src, size_t size)
 {
 	unsigned int	i;
 	unsigned int	n;
@@ -43,3 +30,12 @@ unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 	dest[i] = '\0';
 	return (n);
 }
+
+/* int main (void)
+{
+	char *dest1;
+	char *dest2;
+
+	printf("%d\n", (int)ft_strlcpy(dest1, "lorem ipsum dolor sit amet", 0));
+}
+ */

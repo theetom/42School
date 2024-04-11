@@ -6,14 +6,16 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 15:50:16 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/09 15:54:29 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/04/11 14:09:02 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 int	ft_isascii(int c)
 {
-		if (0 <= c && c <= 127)
-			return (1);
-		else
-			return (0);
+	if (0 <= c && c <= 127)
+		return (1);
+	else
+		return (0);
 }

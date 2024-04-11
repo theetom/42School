@@ -6,12 +6,10 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:08:49 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/10 16:02:58 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/04/11 14:09:27 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <string.h>
 #include "libft.h"
 
 size_t	ft_strlcat(char *dest, char *src, size_t size)
