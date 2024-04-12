@@ -6,7 +6,7 @@
 /*   By: etom <etom@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:54:22 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/12 22:30:16 by etom             ###   ########.fr       */
+/*   Updated: 2024/04/12 23:59:20 by etom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,6 @@ int			ft_strncmp(const char *s1, const char *s2, size_t n);
 void		ft_bzero(void *s, size_t n);
 void		*ft_memchr(const void *s, int c, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
-char		*strnstr(const char *big,	const char *little, size_t len);
+char		*ft_strnstr(const char *big, const char *little, size_t len);
 
 #endif
