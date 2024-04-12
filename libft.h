@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:54:22 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/12 18:06:42 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/04/12 19:31:57 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,6 @@ int				ft_toupper(int ch);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
 
 #endif
