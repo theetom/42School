@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: etom <etom@student.42.fr>                  +#+  +:+       +#+         #
+#    By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/11 12:04:41 by toferrei          #+#    #+#              #
-#    Updated: 2024/04/12 23:40:50 by etom             ###   ########.fr        #
+#    Updated: 2024/04/13 16:45:46 by toferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,7 +15,8 @@ SOURCES = \
 	ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c\
 	ft_memcpy.c ft_memmove.c ft_memset.c ft_strchr.c ft_strlcat.c\
 	ft_strlcpy.c ft_strlen.c ft_tolower.c ft_toupper.c ft_strncmp.c\
-	ft_bzero.c ft_strrchr.c ft_memchr.c ft_memcmp.c ft_strnstr.c
+	ft_bzero.c ft_strrchr.c ft_memchr.c ft_memcmp.c ft_strnstr.c\
+	ft_atoi.c
 BSOURCES = \
 	
 OBJECTS = $(SOURCES:.c=.o)
