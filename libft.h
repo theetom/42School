@@ -6,7 +6,7 @@
 /*   By: etom <etom@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/10 15:54:22 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/20 23:57:31 by etom             ###   ########.fr       */
+/*   Updated: 2024/04/22 00:12:49 by etom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,5 +44,6 @@ void		*ft_calloc(size_t nmemb, size_t size);
 char		*ft_strdup(const char *s);
 char		*ft_substr(char const *s, unsigned int start, size_t len);
 char		*ft_strjoin(char const *s1, char const *s2);
+char		*ft_strtrim(char const *s1, char const *set);
 
 #endif
