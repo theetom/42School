@@ -6,13 +6,13 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:08:49 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/12 18:04:27 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/04/23 18:00:00 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *dest, char *src, size_t size)
+size_t	ft_strlcat(char *dest, const char *src, size_t size)
 {
 	unsigned long	sizedest;
 	unsigned long	sizesrc;

@@ -6,13 +6,13 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 00:11:56 by etom              #+#    #+#             */
-/*   Updated: 2024/04/23 13:26:52 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/04/23 16:54:09 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	chrchk(char c, char const *set)
+static 	int	chrchk(char c, char const *set)
 {
 	int	n;
 
@@ -26,7 +26,7 @@ int	chrchk(char c, char const *set)
 	return (0);
 }
 
-char	*nstr(char const *s1, int d, int e, int k)
+static char	*nstr(char const *s1, int d, int e, int k)
 {
 	char	*cpy;
 	int		c;
