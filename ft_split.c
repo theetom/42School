@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
+/*   By: etom <etom@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:30:28 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/23 17:58:54 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/04/24 01:38:03 by etom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static int	safe_malloc(char **res, int position, size_t buffer)
 {
-	res[position] = (char *)malloc(sizeof(char) * buffer);
+	res[position] = malloc(buffer);
 	if (!res[position])
 		{
 			while (position > 0)
@@ -39,7 +39,7 @@ static	int fill(char **res, char const *s, char c)
 		len = 0;
 		while (*s == c && *s)
 			s++;
-		while (*s != c)
+		while (*s != c && *s)
 		{
 			len++;
 			s++;
@@ -57,11 +57,9 @@ static	int fill(char **res, char const *s, char c)
 
 static int	word_counter(char const *s, char c)
 {
-	int i;
 	int	count;
 	int x;
 
-	i = 0;
 	x = 0;
 	count = 0;
 	while(*s)
@@ -84,7 +82,7 @@ char	**ft_split(char const *s, char c)
 	int		words;
 
 	words = word_counter(s, c);
-	res = malloc(sizeof(s) * (words + 1));
+	res = malloc(sizeof * res * (words + 1));
 	if (!res)
 		return (0);
 	res[words] = NULL;
@@ -107,3 +105,26 @@ char	**ft_split(char const *s, char c)
 
 	
 }
+
+/*void	ft_print_result(char const *s)
+{
+	int		len;
+
+	len = 0;
+	while (s[len])
+		len++;
+	write(1, s, len);
+}
+
+int main(void)
+{
+	int i = 0;
+	char **res = ft_split("Aqui ha gato do grandalhao", ' ');
+	
+	while (res[i] != NULL)
+	{
+		ft_print_result(res[i]);
+		write(1, "\n", 1);
+		i++;
+	}
+}*/
