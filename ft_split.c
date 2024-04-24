@@ -6,7 +6,7 @@
 /*   By: etom <etom@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:30:28 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/24 01:38:03 by etom             ###   ########.fr       */
+/*   Updated: 2024/04/24 10:15:34 by etom             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,21 +89,6 @@ char	**ft_split(char const *s, char c)
 	if (fill (res, s, c))
 		return (NULL);
 	return (res);
-	
-	/* n = 0;
-	
-			res[x][y] = s[n];
-			n++;
-			y++;
-		}
-		n++;
-	} */
-
-
-
-
-
-	
 }
 
 /*void	ft_print_result(char const *s)
@@ -119,7 +104,7 @@ char	**ft_split(char const *s, char c)
 int main(void)
 {
 	int i = 0;
-	char **res = ft_split("Aqui ha gato do grandalhao", ' ');
+	char **res = ft_split("I want to have cat but i already have a pussy of a bf", 'h');
 	
 	while (res[i] != NULL)
 	{
