@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: etom <etom@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/23 13:30:28 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/24 10:15:34 by etom             ###   ########.fr       */
+/*   Updated: 2024/04/24 12:17:32 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,23 +16,23 @@ static int	safe_malloc(char **res, int position, size_t buffer)
 {
 	res[position] = malloc(buffer);
 	if (!res[position])
+	{
+		while (position > 0)
 		{
-			while (position > 0)
-			{
-				free(res[position]);
-				position--;
-			}
-			free(res);
-			return (1);
+			free(res[position]);
+			position--;
 		}
+		free(res);
+		return (1);
+	}
 	return (0);
 }
 
-static	int fill(char **res, char const *s, char c)
+static int	fill(char **res, char const *s, char c)
 {
 	int	i;
 	int	len;
-	
+
 	i = 0;
 	while (*s)
 	{
@@ -43,26 +43,26 @@ static	int fill(char **res, char const *s, char c)
 		{
 			len++;
 			s++;
-		}	
+		}
 		if (len)
 		{
 			if (safe_malloc(res, i, len + 1))
 				return (1);
-			ft_strlcpy(res[i], s  - len, len + 1);
+			ft_strlcpy(res[i], s - len, len + 1);
 		}
 		i++;
 	}
-	return (0);	
+	return (0);
 }
 
 static int	word_counter(char const *s, char c)
 {
 	int	count;
-	int x;
+	int	x;
 
 	x = 0;
 	count = 0;
-	while(*s)
+	while (*s)
 	{
 		if (*s != c && x == 0)
 		{
@@ -91,7 +91,7 @@ char	**ft_split(char const *s, char c)
 	return (res);
 }
 
-/*void	ft_print_result(char const *s)
+/* void	ft_print_result(char const *s)
 {
 	int		len;
 
@@ -99,12 +99,13 @@ char	**ft_split(char const *s, char c)
 	while (s[len])
 		len++;
 	write(1, s, len);
-}
+} */
 
-int main(void)
+/* int main(void)
 {
 	int i = 0;
-	char **res = ft_split("I want to have cat but i already have a pussy of a bf", 'h');
+	char **res = ft_split("I want to have cat 
+	but i already have a pussy of a bf", 'h');
 	
 	while (res[i] != NULL)
 	{
@@ -112,4 +113,4 @@ int main(void)
 		write(1, "\n", 1);
 		i++;
 	}
-}*/
+} */
