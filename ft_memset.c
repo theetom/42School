@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/08 16:12:36 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/11 18:34:01 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/04/24 17:28:40 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,43 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
-	unsigned long	i;
+	size_t	i;
 
 	i = 0;
-	while (((char *)s)[i] && i < n)
+	while (i < n)
 	{
-		((char *)s)[i] = c;
+		((unsigned char *)s)[i] = (unsigned char)c;
 		i++;
 	}
 	return (s);
 }
 
-/*int main (void)
+/* int main (void)
 {
 	int i = 0;
 	
-	int s[10]= {0, 1, 2 , 3, 4, 5, 6, 7, 8, 9};
-	int *res1 = memset(s, 1, 4);
-	int *res2 = ft_memset(s, 1, 4);
-	while (i < 10)
+	int s[100] = {0};
+	while (i < 100)
 	{
 		printf("%d", s[i]);
 		i++;
 	}
+	int *res1 = memset(s, 'A', 42);
+	int *res2 = ft_memset(s, 'A', 42);
+	
 	i = 0;
 	printf("\n");
-	while (i < 10)
+	while (res1[i])
 	{
-		printf("%d", res1[i]);
+		printf("%c", res1[i]);
 		i++;
 	}
 	i = 0;
 	printf("\n");
-	while (i < 10)
+	while (res2[i])
 	{
-		printf("%d", res2[i]);
+		printf("%c", res2[i]);
 		i++;
 	}
+	printf("\n");
 } */

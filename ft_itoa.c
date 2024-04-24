@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/24 12:19:21 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/24 16:55:53 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/04/24 17:00:20 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,7 +33,6 @@ char	*ft_itoa(int n)
 	char	*str;
 	int		m;
 
-	m = 0;
 	nb = n;
 	m = find_size(nb);
 	str = malloc(sizeof * str *(m + 1));
@@ -49,8 +48,7 @@ char	*ft_itoa(int n)
 	}
 	while (nb)
 	{
-		m--;
-		str[m] = nb % 10 + '0';
+		str[--m] = nb % 10 + '0';
 		nb = nb / 10;
 	}
 	return (str);

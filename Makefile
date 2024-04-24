@@ -6,7 +6,7 @@
 #    By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/11 12:04:41 by toferrei          #+#    #+#              #
-#    Updated: 2024/04/24 14:38:42 by toferrei         ###   ########.fr        #
+#    Updated: 2024/04/24 17:34:33 by toferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,8 @@ SOURCES = \
 	ft_strlcpy.c ft_strlen.c ft_tolower.c ft_toupper.c ft_strncmp.c\
 	ft_bzero.c ft_strrchr.c ft_memchr.c ft_memcmp.c ft_strnstr.c\
 	ft_atoi.c ft_calloc.c ft_strdup.c\
-	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c
+	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c\
+	ft_strmapi.c
 BSOURCES = \
 	
 OBJECTS = $(SOURCES:.c=.o)
