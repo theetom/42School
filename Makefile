@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: etom <etom@student.42.fr>                  +#+  +:+       +#+         #
+#    By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/11 12:04:41 by toferrei          #+#    #+#              #
-#    Updated: 2024/04/25 11:42:27 by etom             ###   ########.fr        #
+#    Updated: 2024/04/26 17:54:34 by toferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,11 @@ SOURCES = \
 	ft_bzero.c ft_strrchr.c ft_memchr.c ft_memcmp.c ft_strnstr.c\
 	ft_atoi.c ft_calloc.c ft_strdup.c\
 	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c\
-	ft_strmapi.c ft_striteri.c
+	ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c\
+	ft_putendl_fd.c ft_putnbr_fd.c
 BSOURCES = \
+	ft_lstadd_front.c ft_lstnew.c ft_lstsize.c ft_lstlast.c\
+	ft_lstadd_back.c
 	
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BSOURCES:.c=.o)
