@@ -6,7 +6,7 @@
 #    By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/11 12:04:41 by toferrei          #+#    #+#              #
-#    Updated: 2024/04/26 17:54:34 by toferrei         ###   ########.fr        #
+#    Updated: 2024/04/30 18:27:14 by toferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,7 +22,8 @@ SOURCES = \
 	ft_putendl_fd.c ft_putnbr_fd.c
 BSOURCES = \
 	ft_lstadd_front.c ft_lstnew.c ft_lstsize.c ft_lstlast.c\
-	ft_lstadd_back.c
+	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
+	ft_lstmap.c
 	
 OBJECTS = $(SOURCES:.c=.o)
 BOBJECTS = $(BSOURCES:.c=.o)
