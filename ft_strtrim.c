@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 00:11:56 by etom              #+#    #+#             */
-/*   Updated: 2024/04/24 12:14:32 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/05/02 16:22:25 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static char	*nstr(char const *s1, int d, int e, int k)
 	char	*cpy;
 	int		c;
 
-	cpy = malloc(sizeof * cpy * (k - (d + e) + 1));
+	cpy = ft_calloc(1, (k - (d + e) + 1));
 	if (!cpy)
 		return (0);
 	c = 0;
