@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 18:02:14 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/30 19:31:41 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/05/02 11:57:15 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	*ft_memchr(const void *s, int c, size_t n)
 		return (NULL);
 }
 
-int	main(void)
+/* int	main(void)
 {
 	char s[] = {0, 1, 2 ,3 ,4 ,5};
 	char s1[] = {0, 1, 2 ,3 ,4 ,5};
@@ -58,4 +58,4 @@ int	main(void)
 	printf("t5:%p\n", memchr(s8, 2 + 256, 3));
 	printf("t5:%p\n", ft_memchr(s9, 2 + 256, 3));
 	
-}
+} */

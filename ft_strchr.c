@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:39:57 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/11 19:33:38 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/05/02 12:20:21 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,10 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0' && *s != c)
+	char cc = (char) c;
+	while (*s != '\0' && *s != cc)
 		s++;
-	if (c == '\0')
+	if (cc == '\0')
 		return ((char *)s);
 	if (*s == '\0')
 		return (0);
@@ -26,7 +27,11 @@ char	*ft_strchr(const char *s, int c)
 
 /* int	main(void)
 {
+	char s[] = "tripouille";
 	printf("%s\n", strchr("Aqui ha gato", '\0'));
-	printf("%s\n", ft_strchr("Aqui ha gato", '\0'));
+	printf("%s\n\n", ft_strchr("Aqui ha gato", '\0'));
+	
+	printf("%s\n", strchr(s, 't' + 256));
+	printf("%s\n", ft_strchr(s, 't' + 256));
 }
  */
