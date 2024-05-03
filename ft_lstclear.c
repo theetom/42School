@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/30 15:55:28 by toferrei          #+#    #+#             */
-/*   Updated: 2024/04/30 17:37:35 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:14:53 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,4 @@ void	ft_lstclear(t_list **lst, void (*del)(void*))
 	}
 	free(*lst);
 	*lst = NULL;
-
 }

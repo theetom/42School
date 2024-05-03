@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/09 13:39:57 by toferrei          #+#    #+#             */
-/*   Updated: 2024/05/02 15:51:58 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:08:23 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	unsigned char cc = (char) c;
+	unsigned char	cc;
+
+	cc = (char) c;
 	while (*s != '\0' && *s != cc)
 		s++;
 	if (cc == '\0')

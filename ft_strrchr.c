@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/12 14:59:07 by toferrei          #+#    #+#             */
-/*   Updated: 2024/05/02 12:21:35 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:08:58 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,9 @@
 char	*ft_strrchr(const char *s, int c)
 {
 	size_t	i;
+	char	cc;
 
-	char cc = (char) c;
+	cc = (char) c;
 	i = 0;
 	while (s[i])
 		i++;

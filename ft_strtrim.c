@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/22 00:11:56 by etom              #+#    #+#             */
-/*   Updated: 2024/05/02 16:22:25 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:16:36 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,47 +26,42 @@ static int	chrchk(char c, char const *set)
 	return (0);
 }
 
-static char	*nstr(char const *s1, int d, int e, int k)
+static char	*nstr(char const *s1, size_t start, size_t len)
 {
 	char	*cpy;
-	int		c;
+	size_t	c;
 
-	cpy = ft_calloc(1, (k - (d + e) + 1));
+	if (len <= 0 || start >= ft_strlen(s1))
+		return (ft_strdup(""));
+	cpy = ft_calloc(len + 1, 1);
 	if (!cpy)
-		return (0);
+		return (NULL);
 	c = 0;
-	while (c < k - (d + e))
+	while (c < len)
 	{
-		cpy[c] = s1[d + c];
+		cpy[c] = s1[start + c];
 		c++;
 	}
-	cpy[c] = '\0';
 	return (cpy);
 }
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int		c;
-	int		d;
-	int		e;
 	int		k;
 
 	c = 0;
-	d = 0;
-	e = 0;
-	k = ft_strlen(s1);
-	if (!s1)
-		return ((char *)s1);
+	k = ft_strlen(s1) - 1;
+	if (ft_strlen(s1) == 0)
+		return (ft_strdup(""));
 	while (chrchk(s1[c], set) == 1)
-	{
 		c++;
-		d++;
-	}
-	c = ft_strlen(s1) - 1;
-	while (chrchk(s1[c], set) == 1)
-	{
-		c--;
-		e++;
-	}
-	return (nstr(s1, d, e, k));
+	while (chrchk(s1[k], set) == 1)
+		k--;
+	return (nstr(s1, c, k - (c - 1)));
 }
+/* int main (void)
+{
+	char *s = ft_strtrim("tripouille   xxx", " x");
+	printf("%s", s);
+} */

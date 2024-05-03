@@ -6,7 +6,7 @@
 /*   By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/04/13 17:24:32 by toferrei          #+#    #+#             */
-/*   Updated: 2024/05/02 15:34:06 by toferrei         ###   ########.fr       */
+/*   Updated: 2024/05/03 12:15:19 by toferrei         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	i = 0;
 	test = size * nmemb;
-	if (size && test/size != nmemb)
+	if (size && test / size != nmemb)
 		return (NULL);
 	ptr = malloc(nmemb * size);
 	if (!ptr)
