@@ -6,7 +6,7 @@
 #    By: toferrei <toferrei@student.42lisboa.com    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/11 12:04:41 by toferrei          #+#    #+#              #
-#    Updated: 2024/05/03 15:30:01 by toferrei         ###   ########.fr        #
+#    Updated: 2024/05/04 15:58:14 by toferrei         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SOURCES = \
 	ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c\
 	ft_strmapi.c ft_striteri.c ft_putchar_fd.c ft_putstr_fd.c\
 	ft_putendl_fd.c ft_putnbr_fd.c
+	
 BSOURCES = \
 	ft_lstadd_front.c ft_lstnew.c ft_lstsize.c ft_lstlast.c\
 	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c\
